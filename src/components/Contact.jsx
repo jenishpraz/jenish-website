@@ -51,7 +51,7 @@ export default function Contact() {
 
   const socials = [
     { icon: FiGithub,    href: 'https://github.com/jenishpraz' },
-    { icon: FiLinkedin,  href: 'https://linkedin.com/in/jenishprajapati' },
+    { icon: FiLinkedin,  href: 'https://www.linkedin.com/in/prajapati-jenish-b9a3bb191/' },
     { icon: FiFacebook,  href: 'https://facebook.com' },
     { icon: FiInstagram, href: 'https://instagram.com' },
   ];
