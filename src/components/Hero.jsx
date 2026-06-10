@@ -96,7 +96,7 @@ export default function Hero() {
               className="flex gap-2.5">
               {[
                 { icon:FiGithub,    href:'https://github.com/jenishpraz' },
-                { icon:FiLinkedin,  href:'https://linkedin.com/in/jenishprajapati' },
+                { icon:FiLinkedin,  href:'https://www.linkedin.com/in/prajapati-jenish-b9a3bb191/' },
                 { icon:FiInstagram, href:'https://instagram.com' },
               ].map(({ icon:Icon, href }, i) => (
                 <motion.a key={i} href={href} target="_blank" rel="noopener noreferrer"
