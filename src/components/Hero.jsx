@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiMail, FiGithub, Fi, FiInstagram } from 'react-icons/fi';
+import { FiArrowRight, FiMail, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
 const roles = ['Full Stack Developer', 'React.js Developer', 'Next.js Developer', 'Laravel Developer'];
