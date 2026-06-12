@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiInstagram, FiFacebook, FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
-const FORMSPREE_ID = 'mvznpqnb'; // 🔁 Replace with your Formspree form ID
+const FORMSPREE_ID = 'mvznpqnb';
 
 export default function Contact() {
   const { isDark } = useTheme();
@@ -44,23 +44,22 @@ export default function Contact() {
   };
 
   const info = [
-    { icon: FiMail,   label: 'Email',    value: 'prajapatijenish37@gmail.com', href: 'mailto:prajapatijenish37@gmail.com' },
-    { icon: FiPhone,  label: 'Phone',    value: '+977-9863443359',              href: 'tel:+9779863443359' },
-    { icon: FiMapPin, label: 'Location', value: 'Bhaktapur, Nepal',             href: '#' },
+    { icon: FiMail, label: 'Email', value: 'prajapatijenish37@gmail.com', href: 'mailto:prajapatijenish37@gmail.com' },
+    { icon: FiPhone, label: 'Phone', value: '+977-9863443359', href: 'tel:+9779863443359' },
+    { icon: FiMapPin, label: 'Location', value: 'Bhaktapur, Nepal', href: '#' },
   ];
 
   const socials = [
-    { icon: FiGithub,    href: 'https://github.com/jenishpraz' },
-    { icon: FiLinkedin,  href: 'https://www.linkedin.com/in/prajapati-jenish-b9a3bb191/' },
-    { icon: FiFacebook,  href: 'https://facebook.com' },
+    { icon: FiGithub, href: 'https://github.com/jenishpraz' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/prajapati-jenish-b9a3bb191/' },
+    { icon: FiFacebook, href: 'https://facebook.com' },
     { icon: FiInstagram, href: 'https://instagram.com' },
   ];
 
-  const inp = `w-full px-4 py-3.5 rounded-xl font-body text-sm outline-none transition-all border ${
-    isDark
-      ? 'bg-dark border-dark-border text-white placeholder-[#444] focus:border-accent/50 focus:bg-dark-card'
-      : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-accent/50 focus:ring-2 focus:ring-accent/10'
-  }`;
+  const inp = `w-full px-4 py-3.5 rounded-xl font-body text-sm outline-none transition-all border ${isDark
+    ? 'bg-dark border-dark-border text-white placeholder-[#444] focus:border-accent/50 focus:bg-dark-card'
+    : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400 focus:border-accent/50 focus:ring-2 focus:ring-accent/10'
+    }`;
 
   const isSending = status === 'sending';
 
@@ -95,9 +94,8 @@ export default function Contact() {
                 <motion.a key={i} href={href}
                   initial={{ opacity: 0, x: -16 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.18 + i * 0.09 }}
                   whileHover={{ x: 5 }}
-                  className={`flex items-center gap-4 p-4 rounded-2xl border transition-all ${
-                    isDark ? 'bg-dark-card border-dark-border hover:border-accent/30' : 'bg-gray-50 border-gray-100 hover:border-accent/30'
-                  }`}
+                  className={`flex items-center gap-4 p-4 rounded-2xl border transition-all ${isDark ? 'bg-dark-card border-dark-border hover:border-accent/30' : 'bg-gray-50 border-gray-100 hover:border-accent/30'
+                    }`}
                 >
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{ background: isDark ? 'rgba(99,102,241,0.12)' : '#EEF2FF' }}>
@@ -117,11 +115,10 @@ export default function Contact() {
                 <motion.a key={i} href={href} target="_blank" rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: 0.5 + i * 0.08 }}
                   whileHover={{ scale: 1.12, y: -2 }}
-                  className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all ${
-                    isDark
-                      ? 'bg-dark-card border border-dark-border text-dark-text hover:border-accent-dark hover:text-accent-dark'
-                      : 'bg-gray-100 text-gray-500 hover:bg-accent-light hover:text-accent'
-                  }`}>
+                  className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all ${isDark
+                    ? 'bg-dark-card border border-dark-border text-dark-text hover:border-accent-dark hover:text-accent-dark'
+                    : 'bg-gray-100 text-gray-500 hover:bg-accent-light hover:text-accent'
+                    }`}>
                   <Icon size={16} />
                 </motion.a>
               ))}
