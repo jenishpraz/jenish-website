@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
 import BackToTop from './components/BackToTop';
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function Loader() {
   const { isDark } = useTheme();
@@ -53,6 +54,7 @@ function AppInner() {
           </main>
           <Footer/>
           <BackToTop/>
+          <WhatsAppButton />
         </>
       )}
     </>
