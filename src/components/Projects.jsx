@@ -17,10 +17,10 @@ const projects = [
     live: 'https://converttree.com', color: '#818CF8',
   },
   {
-    title: 'Tour & Travel Project', label: 'Next.js — Tailwind CSS', emoji: '✈️',
-    desc: 'Modern travel and tourism website using Next.js and Tailwind CSS, deployed on Vercel. Responsive layouts and smooth UX.',
-    tags: ['Next.js', 'Tailwind CSS', 'Vercel'],
-    live: 'https://tour-travel-project-seven.vercel.app/', color: '#6366F1',
+    title: 'Lions Den Hotel & Resort', label: 'Laravel — Full Stack', emoji: '🏨',
+    desc: 'A complete hotel and restaurant platform for online food orders, table reservations, hall bookings, and guest services.',
+    tags: ['Laravel', 'PHP', 'MySQL', 'Blade', 'JavaScript', 'HTML', 'CSS'],
+    live: 'https://lionsdenhotelresort.com/elaichi-restro', color: '#6366F1', hideGithub: true,
   },
   {
     title: 'AKELTOR BRAND', label: 'React.js — Tailwind CSS', emoji: '💼',
@@ -35,10 +35,10 @@ const projects = [
     live: 'https://evfastenergy.com//', color: '#6366F1',
   },
   {
-    title: 'YTS Movie App', label: 'Next.js — API Integration', emoji: '🎬',
-    desc: 'Movie browsing application with external API integration. Dynamic data fetching and responsive UI features.',
-    tags: ['Next.js', 'API Integration', 'Dynamic Data'],
-    live: 'https://next-js-yts-bz-movie-project-kkrp.vercel.app/', color: '#818CF8',
+    title: 'Adsaro Nepal', label: 'Next.js — Web Platform', emoji: '📢',
+    desc: 'A digital advertising and monetization platform connecting advertisers and publishers with targeted campaigns and performance analytics.',
+    tags: ['Next.js', 'React.js', 'JavaScript', 'Tailwind CSS'],
+    live: 'https://adsaronepal.com.np/', color: '#6366F1', hideGithub: true,
   },
 ];
 
@@ -91,11 +91,13 @@ export default function Projects() {
                   onMouseLeave={e => { e.currentTarget.style.background = isDark ? 'rgba(99,102,241,0.12)' : '#EEF2FF'; e.currentTarget.style.color = isDark ? '#818CF8' : '#6366F1'; }}>
                   <FiExternalLink size={12} /> Live
                 </a>
-                <a href="https://github.com/jenishpraz" target="_blank" rel="noopener noreferrer"
-                  className={`flex items-center gap-1.5 font-body text-xs font-semibold px-3.5 py-2 rounded-xl transition-all ${isDark ? 'text-dark-text bg-dark-border hover:bg-[#222] hover:text-white' : 'text-gray-500 bg-gray-200 hover:bg-gray-300 hover:text-gray-900'
-                    }`}>
-                  <FiGithub size={12} /> GitHub
-                </a>
+                {!p.hideGithub && (
+                  <a href="https://github.com/jenishpraz" target="_blank" rel="noopener noreferrer"
+                    className={`flex items-center gap-1.5 font-body text-xs font-semibold px-3.5 py-2 rounded-xl transition-all ${isDark ? 'text-dark-text bg-dark-border hover:bg-[#222] hover:text-white' : 'text-gray-500 bg-gray-200 hover:bg-gray-300 hover:text-gray-900'
+                      }`}>
+                    <FiGithub size={12} /> GitHub
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
