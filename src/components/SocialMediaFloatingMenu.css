@@ -1,0 +1,120 @@
+.social-menu {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-menu__toggle,
+.social-menu__link {
+  position: relative;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-menu__toggle {
+  background: linear-gradient(145deg, #6366f1, #4f46e5);
+}
+
+.social-menu__toggle:focus-visible,
+.social-menu__link:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 4px;
+}
+
+.social-menu__toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-menu__link {
+  width: 48px;
+  height: 48px;
+  text-decoration: none;
+}
+
+.social-menu__link--facebook {
+  background: #1877f2;
+}
+
+.social-menu__link--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #e1306c 55%, #f77737 100%);
+}
+
+.social-menu__link--tiktok {
+  background: #111;
+}
+
+.social-menu__link--whatsapp {
+  background: #25d366;
+}
+
+.social-menu__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(17, 24, 39, 0.92);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+
+.social-menu__link:hover .social-menu__tooltip,
+.social-menu__link:focus-visible .social-menu__tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .social-menu {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+
+  .social-menu__toggle {
+    width: 58px;
+    height: 58px;
+  }
+
+  .social-menu__link {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-menu__tooltip {
+    transition: none;
+  }
+}
